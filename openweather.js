@@ -1,5 +1,7 @@
-const got = require('got')
-const dotenv = require("dotenv")
+// const got = require('got')
+import got from 'got'
+// const dotenv = require("dotenv")
+import dotenv from 'dotenv'
 dotenv.config();
 
 // const apiKey = 'fd58f45000e4c9ee9b5a555653d9a10e'
@@ -48,4 +50,4 @@ class Weather {
 //   console.log(responseBody);
 // });
 
-module.exports = Weather
+// module.exports = Weather

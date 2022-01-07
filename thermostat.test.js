@@ -1,4 +1,5 @@
-const Thermostat = require("./thermostat")
+// const Thermostat = require("./newthermostat")
+import Thermostat from "./newthermostat"
 
 describe("Thermostat", () => {
   let thermostat = new Thermostat();
@@ -50,7 +51,7 @@ describe("Thermostat", () => {
     expect(thermostat.getTemperature()).toEqual(20);
   });
 
-  it("can update its temperature to the city its located", async () => {
+  it("can update its temperature to the city its located", () => {
     const weatherDouble = { fetchWeatherData: (city, callback) => 5}
     const newThermostat = new Thermostat(weatherDouble)
     

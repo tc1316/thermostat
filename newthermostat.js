@@ -1,6 +1,6 @@
 // const Weather = require("./openweather.js")
 
-class Thermostat {
+export default class Thermostat {
   constructor(weather) {
     this.weatherObj = weather;
     this.temperature = 20;
@@ -37,13 +37,13 @@ class Thermostat {
     this.temperature = 20;
   }
 
-  setTemperature(currentTemp) {
-    this.temperature = currentTemp
-  }
+  // setTemperature(currentTemp) {
+  //   this.temperature = currentTemp
+  // }
 
   setCity(city) {
     this.weatherObj.fetchWeatherData(city, (responseBody) => {
-      this.setTemperature(responseBody.main.temp)
+      this.temperature = responseBody.main.temp
       console.log(thermostat.getTemperature())
     })
   
@@ -54,6 +54,7 @@ class Thermostat {
 // const thermostat = new Thermostat(weather);
 
 // thermostat.setCity("London")
+// setTimeout(() => {console.log(thermostat.getTemperature())},5000)
 
 
-module.exports = Thermostat;
+// module.exports = Thermostat;
