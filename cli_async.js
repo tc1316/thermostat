@@ -1,5 +1,5 @@
 // const Thermostat = require("./thermostat");
-import Thermostat from "./thermostat.js";
+import Thermostat from "./newthermostat.js";
 // const readline = require("readline");
 import readline from "readline";
 const rl = readline.createInterface({
